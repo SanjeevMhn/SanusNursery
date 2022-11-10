@@ -14,12 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
+            $table->engine='InnoDB';
             $table->id('product_id');
             $table->string('product_name_nep');
             $table->string('product_name_eng');
-            $table->decimal('product_price,10,2');
+            $table->decimal('product_price',10,2);
+            $table->integer('product_category');
             $table->text('product_desc');
-            $table->foreignId('product_category')->references('category_id')->on('product_categories');
             $table->string('product_img')->nullable();
             $table->timestamps();
         });
