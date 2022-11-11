@@ -15,13 +15,30 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        Product::insert([
-            'product_name_nep' => 'Sayapatri',
-            'product_name_eng' => 'Marigold',
-            'product_price' => 30.00,
-            'product_category' => 1,
-            'product_desc' => 'Sayapatri also knownn as marigold, available for sale',
-            'product_img' => ''
-        ]);
+
+        $data = [
+            [
+                'product_name_nep' => 'gulab',
+                'product_name_eng' => 'rose',
+                'product_price' => 30.00,
+                'product_category' => 3,
+                'product_desc' => 'Gulab also known as Rose plant available for sale'
+            ],
+            [
+                'product_name_nep' => 'Coffee',
+                'product_name_eng' => 'rose',
+                'product_price' => 30.00,
+                'product_category' => 3,
+                'product_desc' => 'Coffee available for sale'
+            ],
+            [
+                'product_name_nep' => 'Kera',
+                'product_name_eng' => 'Banana',
+                'product_price' => 30.00,
+                'product_category' => 1,
+                'product_desc' => 'Banana plant available for sale'
+            ],
+        ];
+        Product::insert($data);
     }
 }
